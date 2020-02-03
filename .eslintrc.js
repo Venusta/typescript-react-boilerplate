@@ -1,12 +1,12 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
+  parser: "@typescript-eslint/parser",  // Specifies the ESLint parser
   env: {
     browser: true,
     es6: true,
   },
   extends: [
-    'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
-    'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    "plugin:react/recommended",  // Uses the recommended rules from @eslint-plugin-react
+    "plugin:@typescript-eslint/recommended",  // Uses the recommended rules from @typescript-eslint/eslint-plugin
     "airbnb",
   ],
   globals: {
@@ -15,7 +15,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2018,  // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module',  // Allows for the use of imports
+    sourceType: "module",  // Allows for the use of imports
     ecmaFeatures: {
       jsx: true,  // Allows for the parsing of JSX
     },
@@ -37,25 +37,25 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
 
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
+    "import/extensions": ["error", "ignorePackages", {
+      js: "never",
+      jsx: "never",
+      ts: "never",
+      tsx: "never",
     }],
 
   },
   settings: {
     react: {
-      version: 'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: "detect",  // Tells eslint-plugin-react to automatically detect the version of React to use
     },
-    'import/extensions': [".js", ".jsx", ".ts", ".tsx"],
-    'import/parsers': {
-      '@typescript-eslint/parser': [".ts", ".tsx"]
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
-    'import/resolver': {
-      'node': {
-        'extensions': [".js", ".jsx", ".ts", ".tsx"]
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },

@@ -30,7 +30,7 @@ module.exports = {
     path.join(PATH_SOURCE, "./index.tsx"),
   ],
   resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
+    // Add ".ts" and ".tsx" as resolvable extensions.
     extensions: [".js", ".ts", ".tsx"],
   },
 
@@ -59,7 +59,7 @@ module.exports = {
           },
         ],
       },
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      // All output ".js" files will have any sourcemaps re-processed by "source-map-loader".
       {
         enforce: "pre",
         test: /\.js$/,
@@ -69,7 +69,7 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: "development", // use 'development' unless process.env.NODE_ENV is defined
+      NODE_ENV: "development", // use "development" unless process.env.NODE_ENV is defined
       DEBUG: false,
     }),
     new CleanWebpackPlugin(),
