@@ -1,3 +1,4 @@
+/* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -35,6 +36,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              eslintPath: require.resolve('eslint'),
+
+            },
+            loader: require.resolve('eslint-loader'),
+          },
+        ],
+
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
