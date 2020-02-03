@@ -1,6 +1,7 @@
 /* eslint-disable */
-const webpack = require('webpack');
-const path = require('path');
+
+const webpack = require("webpack");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -30,7 +31,7 @@ module.exports = {
   ],
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".js", ".ts", ".tsx"]
+    extensions: [".js", ".ts", ".tsx"],
   },
 
   module: {
@@ -38,32 +39,33 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        enforce: 'pre',
+        enforce: "pre",
         use: [
           {
             options: {
-              eslintPath: require.resolve('eslint'),
+              eslintPath: require.resolve("eslint"),
 
             },
-            loader: require.resolve('eslint-loader'),
+            loader: require.resolve("eslint-loader"),
           },
         ],
-
+      },
+      {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader"
-          }
-        ]
+            loader: "ts-loader",
+          },
+        ],
       },
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
         enforce: "pre",
         test: /\.js$/,
-        loader: "source-map-loader"
-      }
-    ]
+        loader: "source-map-loader",
+      },
+    ],
   },
   plugins: [
     new webpack.EnvironmentPlugin({

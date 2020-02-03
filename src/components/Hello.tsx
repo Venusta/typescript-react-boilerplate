@@ -6,9 +6,5 @@ export interface HelloProps {
 }
 
 export const Hello = (props: HelloProps) => (
-  <h1>
-    Hello
-    {props.testProp}
-    !
-  </h1>
+  <h1>{`Hello ${props.testProp}!`}</h1>
 );
