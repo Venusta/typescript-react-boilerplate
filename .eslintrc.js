@@ -5,9 +5,9 @@ module.exports = {
     es6: true,
   },
   extends: [
+    "airbnb",
     "plugin:react/recommended",  // Uses the recommended rules from @eslint-plugin-react
     "plugin:@typescript-eslint/recommended",  // Uses the recommended rules from @typescript-eslint/eslint-plugin
-    "airbnb",
   ],
   globals: {
     Atomics: "readonly",
@@ -21,8 +21,9 @@ module.exports = {
     },
   },
   plugins: [
+    "@typescript-eslint",
     "react",
-    "@typescript-eslint"
+    "react-hooks",
   ],
   rules: {
     "quotes": [
@@ -43,7 +44,6 @@ module.exports = {
       ts: "never",
       tsx: "never",
     }],
-
   },
   settings: {
     react: {
